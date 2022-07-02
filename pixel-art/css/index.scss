@@ -1,0 +1,129 @@
+@import "global";
+
+body {
+    background-color: $bg;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 2rem;
+
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    color: $text-primary;
+}
+
+h2 {
+    font-size: 1.5rem;
+    text-align: center;
+
+    border-top: solid 3px;
+
+    padding: 0;
+    margin: auto;
+
+    height: 100%;
+
+    display: grid;
+    place-content: center;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+
+    gap: 30px;
+}
+
+
+// rotate animation
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes satellite-back {
+    0% {
+        transform: translate(-80px, 80px);
+        visibility: visible;
+    }
+
+    50% {
+        transform: translate(0, 0);
+        visibility: hidden;
+    }
+
+    100% {
+        transform: translate(0, 0);
+        visibility: hidden;
+    }
+}
+
+@keyframes satellite-front {
+    0% {
+        transform: translate(0, 0);
+        visibility: visible;
+    }
+
+    50% {
+        transform: translate(-80px, 80px);
+        visibility: hidden;
+    }
+
+    100% {
+        transform: translate(-80px, 80px);
+        visibility: hidden;
+    }
+}
+
+#developer {
+    #circle {
+        // rotate 90deg
+        transform-origin: 85px 66px;
+        // rotate infinite
+        animation: rotate infinite 5s linear;
+    }
+
+    .satelite {
+        &#front {
+            animation: satellite-front 3s ease-in-out forwards infinite;
+            visibility: hidden;
+            animation-delay: 1.5s;
+        }
+
+        &#back {
+            animation: satellite-back 3s ease-in-out forwards infinite;
+            visibility: hidden;
+        }
+    }
+}
+
+
+
+#accodius-avatar {
+    background-color: #2e222f;
+
+    // background-image: url('../images/accodius_avatar.png');
+
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}

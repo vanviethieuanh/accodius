@@ -1,0 +1,361 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --blue: #699BF7;
+  --red: #FC5151;
+  --light-yellow: #FFE100;
+  --yellow: #FFCE42;
+  --green: #2ECC71;
+  --violet: #7D3CFF;
+  --behance: #0057ff;
+  --purple: #9B59B6;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Oswald", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  scrollbar-width: thin;
+}
+body * {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  font-family: "Oswald", sans-serif;
+  color: black;
+}
+
+h2 {
+  font-family: "Oswald", sans-serif;
+  font-weight: normal;
+  color: black;
+  font-size: 1.2rem;
+}
+
+h3 {
+  font-weight: 300;
+  font-family: "Oswald", sans-serif;
+  color: #858585;
+  font-size: 1.2rem;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  color: #858585;
+}
+
+button {
+  outline: none;
+  height: 40px;
+  border-radius: 0;
+  border: solid 4px #000000;
+  font-family: "Oswald", sans-serif;
+  font-weight: normal;
+  font-size: 1.2rem;
+  line-height: 0;
+  padding: 0 0.5rem;
+  padding-bottom: 6px;
+  box-shadow: inset 0 -6px 0 rgba(0, 0, 0, 0.2);
+}
+button:active {
+  height: 34px;
+  padding-bottom: 0;
+  box-shadow: none;
+  transform: translate(0, 6px);
+}
+
+.card {
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.card:hover {
+  transform: translate(-10px, -10px);
+  box-shadow: 10px 10px 0 black;
+  box-shlight-adow: 10px 10px 0 black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background-color: #F5BF02;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+main {
+  margin: 4rem auto;
+  width: auto;
+  max-width: 760px;
+  display: grid;
+  gap: 4rem;
+}
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+section {
+  width: auto;
+}
+
+.title {
+  color: black;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  user-select: none;
+  text-transform: uppercase;
+}
+
+.callout {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  align-items: center;
+  justify-content: center;
+}
+.callout h1 {
+  width: fit-content;
+  height: fit-content;
+  color: black;
+  font-size: 3rem;
+  letter-spacing: 0.03em;
+  margin-left: 3rem;
+}
+.callout .avatar {
+  border: 4px solid black;
+  width: 280px;
+  height: 280px;
+  background-image: url("../images/me.JPG");
+  background-position: bottom;
+  background-size: cover;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: auto 2px auto;
+  align-items: center;
+}
+.about .title {
+  height: 100%;
+  padding-left: 4px;
+  width: 60px;
+  background-color: black;
+  justify-content: center;
+  writing-mode: vertical-lr;
+  transform: scale(-1);
+  color: white;
+  letter-spacing: 0.1em;
+}
+.about .devider {
+  content: "";
+  height: 100%;
+  width: auto;
+  border-right: 2px dashed black;
+}
+.about .intro {
+  font-size: 1rem;
+  width: clamp(45ch, 100%, 75ch);
+  font-family: "Roboto", sans-serif;
+  padding: 2rem;
+  border: 4px solid black;
+  border-radius: 0 0px 0px 0;
+  background-color: white;
+}
+.about .intro a,
+.about .intro abbr {
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
+}
+
+.services .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+.services .title {
+  top: 0;
+}
+.services .service {
+  border: 4px solid black;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "overlap";
+}
+.services .service * {
+  position: relative;
+}
+.services .service .illustration {
+  grid-area: overlap;
+}
+.services .service .title {
+  padding-left: 2rem;
+  grid-area: overlap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.services .design {
+  display: flex;
+  align-items: center;
+  background-color: #7D3CFF;
+}
+.services .development {
+  background-color: #FC5151;
+}
+.services .development .planet {
+  z-index: 0;
+}
+.services .development .illustration #circle {
+  transform-origin: 231px 91px;
+  animation: rotate 3s ease-in-out infinite;
+}
+.services .development .illustration #planet {
+  fill: #FFE100;
+  background: url("../svg/earth-cloud.svg");
+}
+.services .development .illustration #cloud1 {
+  transform: translate(48px, 0) rotate(23deg);
+  animation: cloud1 10s linear infinite;
+}
+.services .development .illustration #cloud2 {
+  transform: translate(-114px, 0) rotate(23deg);
+  animation: cloud2 10s linear infinite;
+}
+.services .development .illustration #satellite-front {
+  animation: satellite-front 3s ease-in-out forwards infinite;
+  visibility: hidden;
+  animation-delay: 1.5s;
+}
+.services .development .illustration #satellite-back {
+  animation: satellite-back 3s ease-in-out forwards infinite;
+  visibility: hidden;
+}
+.services .development .title {
+  line-height: 1em;
+}
+
+@media (max-width: 768px) {
+  main {
+    margin: 2rem;
+  }
+
+  .callout {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto;
+  }
+  .callout h1 {
+    padding: 0;
+    margin: 2rem 0;
+  }
+  .callout .avatar {
+    grid-row: 2;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+
+  .about {
+    grid-template-columns: auto;
+    grid-template-rows: auto 2px auto;
+    align-items: center;
+  }
+  .about .title {
+    writing-mode: horizontal-tb;
+    width: 100%;
+    transform: unset;
+  }
+  .about .devider {
+    border-right: none;
+    border-top: 2px dashed black;
+  }
+  .about .intro {
+    width: auto;
+  }
+}
+@keyframes satellite-back {
+  0% {
+    transform: translate(-80px, 80px);
+    visibility: visible;
+  }
+  50% {
+    transform: translate(0, 0);
+    visibility: hidden;
+  }
+  100% {
+    transform: translate(0, 0);
+    visibility: hidden;
+  }
+}
+@keyframes satellite-front {
+  0% {
+    transform: translate(0, 0);
+    visibility: visible;
+  }
+  50% {
+    transform: translate(-80px, 80px);
+    visibility: hidden;
+  }
+  100% {
+    transform: translate(-80px, 80px);
+    visibility: hidden;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes cloud1 {
+  0% {
+    transform: translate(48px, 0);
+  }
+  100% {
+    transform: translate(210px, 0px);
+  }
+}
+@keyframes cloud2 {
+  0% {
+    transform: translate(-114px, 0px);
+  }
+  100% {
+    transform: translate(48px, 0px);
+  }
+}
+@keyframes resize {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
