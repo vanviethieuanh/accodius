@@ -1,0 +1,154 @@
+@import "global";
+
+
+$border-thickness: 2px;
+$primary-font: $font-dense;
+
+*{box-sizing: border-box;}
+
+
+body{
+    background-color: hsl(240, 9%, 98%);
+    
+    box-sizing: border-box;
+    
+    display: grid;
+    place-items: center;
+    
+    height: 100vh;
+    font-size: 16px;
+}
+
+
+main{
+    margin: 4rem auto;
+    padding: 0 2rem;
+    padding-bottom: 4rem;
+
+    width: auto;
+    max-width: 400px;
+    
+    display: grid;
+    gap: 4rem;
+}
+
+h1 {
+    margin: 0;
+
+    font-family: $primary-font;
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+.call{
+    text-align: center;
+    p{
+        margin: 7px;
+    }
+}
+.options{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+
+    gap: 1rem;
+}
+
+.dense{
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+
+    display: grid;
+
+    margin-top: 20px;
+
+    .platform{
+        height: 51px;
+
+        background-color: $text-primary;
+        transition: all .2s ease-in-out;
+
+        &:hover{
+            background-color: var(--color);
+        }
+    }
+    h2{
+        // hide h2 text
+        display: none;
+    }
+}
+
+.platform{
+    color: white;
+
+    border: $border;
+    border-width: 
+    $border-thickness $border-thickness $border-thickness*2 $border-thickness;
+    border-radius: 8px;
+
+    display: grid;
+    grid-template-columns: 50px auto;
+
+    align-items: center;
+
+    background-color: var(--color);
+
+    &:active{
+        border-width: 
+        $border-thickness;
+        transform: translateY($border-thickness);
+    }
+
+    h2{
+        user-select: none;
+
+        color: inherit;
+
+        margin: .5rem 2rem;
+        margin-left: 0;
+    }
+
+    .icon{
+        font-size: 1.2rem;
+
+        display: grid;
+        place-items: center;
+
+    }
+
+    &.email{
+        h2::after{
+            content: 'vanviethieuanh@gmail.com';
+        }
+        
+        h2.copied::after{
+            content: 'Copied to clipboard';
+        }
+
+        &:hover {
+            h2:not(.copied)::after{
+                content: 'Copy to clipboard';
+            }
+        }
+    }
+   
+}
+
+@media (max-width: 768px) {
+    // 📱
+    p{
+        width: auto;
+    }
+
+    .platform.email{
+
+        &:hover {
+            h2::after{
+                content: 'Copied to clipboard';
+            }
+        }
+    }
+}
