@@ -61,7 +61,7 @@ button {
   outline: none;
   height: 40px;
   border-radius: 0;
-  border: solid 4px #000000;
+  border: solid 3px #000000;
   font-family: "Oswald", sans-serif;
   font-weight: normal;
   font-size: 1.2rem;
@@ -82,16 +82,27 @@ button:active {
 }
 
 .card {
-  -webkit-transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  width: 280px;
+  height: 343px;
+  border: solid 3px black;
+  border-radius: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 280px auto;
+      grid-template-rows: 280px auto;
+  overflow: hidden;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.card .illustration {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
 }
 
 .card:hover {
-  -webkit-transform: translate(-10px, -10px);
-          transform: translate(-10px, -10px);
-  -webkit-box-shadow: 10px 10px 0 black;
-          box-shadow: 10px 10px 0 black;
-  box-shlight-adow: 10px 10px 0 black;
+  margin-top: -20px;
 }
 
 * {
@@ -174,7 +185,7 @@ a {
 
 .platform {
   color: white;
-  border: solid 4px #000000;
+  border: solid 3px #000000;
   border-width: 2px 2px 4px 2px;
   border-radius: 8px;
   display: -ms-grid;

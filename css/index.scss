@@ -1,24 +1,49 @@
-@import "global";
+@import 'global';
+
+$bg: #2e222f;
+$text-primary: #fff;
+
+$focus-width: 900px;
 
 body {
     background-color: $bg;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-items: center;
 
     gap: 2rem;
 
     height: 100vh;
 }
 
-a {
-    text-decoration: none;
+main {
+    max-width: $focus-width;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
-h1 {
+a {
+    text-decoration: none;
     color: $text-primary;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $text-primary;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-family: $font-p;
 }
 
 h2 {
@@ -43,6 +68,66 @@ h2 {
     gap: 30px;
 }
 
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .dense {
+        margin: 0;
+    }
+
+    &#greeting > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    &#contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    &#navigations {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        h1 {
+            text-decoration: underline;
+        }
+    }
+
+    #avatar {
+        height: 60px;
+        width: 60px;
+
+        background-color: #2e222f;
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        $border-thickness: 2px;
+
+        border: $border;
+        border-width: $border-thickness $border-thickness $border-thickness * 2
+            $border-thickness;
+        border-radius: 8px;
+    }
+}
 
 // rotate animation
 @keyframes rotate {
@@ -115,8 +200,6 @@ h2 {
     }
 }
 
-
-
 #accodius-avatar {
     background-color: #2e222f;
 
@@ -125,5 +208,4 @@ h2 {
     background-size: 50%;
     background-position: center;
     background-repeat: no-repeat;
-
 }

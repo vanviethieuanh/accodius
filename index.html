@@ -1,51 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./icon.png" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="css/card.css" />
+        <link rel="stylesheet" href="css/index.css" />
 
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 110 110%22><text y=%22.9em%22 font-size=%2290%22>🤙</text></svg>">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/index.css">
+        <title>Accodius</title>
+        <meta name="title" content="Accodius | Card" />
+        <meta
+            name="description"
+            content="👋 Hi, Accodius here! Here is our information, follow us!"
+        />
 
-    <title>Accodius</title>
-    <meta name="title" content="Accodius | Card">
-    <meta name="description" content="👋 Hi, Accodius here! Here is our information, follow us!">
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://vanviethieuanh.com/" />
+        <meta property="og:title" content="Accodius" />
+        <meta
+            property="og:description"
+            content="👋 Hi, Accodius here! Here is our information, follow us!"
+        />
+        <!-- <meta property="og:image" content=""> -->
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://vanviethieuanh.com/">
-    <meta property="og:title" content="Accodius">
-    <meta property="og:description" content="👋 Hi, Accodius here! Here is our information, follow us!">
-    <!-- <meta property="og:image" content=""> -->
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://vanviethieuanh.com/" />
+        <meta property="twitter:title" content="Accodius" />
+        <meta
+            property="twitter:description"
+            content="👋 Hi, Accodius here! Here is our information, follow us!"
+        />
+        <!-- <meta property="twitter:image" content=""> -->
+    </head>
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://vanviethieuanh.com/">
-    <meta property="twitter:title" content="Accodius">
-    <meta property="twitter:description" content="👋 Hi, Accodius here! Here is our information, follow us!">
-    <!-- <meta property="twitter:image" content=""> -->
-</head>
+    <body>
+        <main>
+            <section id="greeting">
+                <div>
+                    <div id="accodius">
+                        <div
+                            id="avatar"
+                            style="background-image: url('./avatar.gif')"
+                        ></div>
+                    </div>
+                    <h3>Hellow! Accodius here!</h3>
+                </div>
+            </section>
 
-<body>
-    <main>
-        <section class="call">
-            <h1>
-                Hellow! Accodius here.
-            </h1>
+            <section id="navigations">
+                <a href="./pixel-art/"> <h1>Pixel Arts</h1> </a>
+                <a href="./creative-coding/"> <h1>Creative Coding</h1> </a>
+            </section>
 
-            <p>This page in now under development! See my works on my <a href="https://www.instagram.com/accodius/">Instagram</a></p>
-        </section>
+            <section id="contact">
+                <h3>Contact me</h3>
+                <div>
+                    <div class="dense">
+                        <a
+                            href="https://twitter.com/AccodiusdeVan"
+                            target="_blank"
+                        >
+                            <div class="platform fb" style="--color: #1da1f2">
+                                <div class="icon">
+                                    <i class="fab fa-twitter"></i>
+                                </div>
+                                <h2 class="title">Twitter</h2>
+                            </div>
+                        </a>
+                        <a
+                            href="https://www.instagram.com/accodius/"
+                            target="_blank"
+                        >
+                            <div class="platform fb" style="--color: #e4405f">
+                                <div class="icon">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                                <h2 class="title">Instagram</h2>
+                            </div>
+                        </a>
+                        <a
+                            href="https://discord.com/users/accodius#0039"
+                            target="_blank"
+                        >
+                            <div class="platform fb" style="--color: #5865f2">
+                                <div class="icon">
+                                    <i class="fab fa-discord"></i>
+                                </div>
+                                <h2 class="title">Discord</h2>
+                            </div>
+                        </a>
+                        <a
+                            href="http://www.facebook.com/vanviethieuanh/"
+                            target="_blank"
+                        >
+                            <div
+                                class="platform small fb"
+                                style="--color: #4183f2"
+                            >
+                                <div class="icon">
+                                    <i class="fab fa-facebook-messenger"></i>
+                                </div>
+                                <h2 class="title">Messenger</h2>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
 
-        <section>
-
-        </section>
-    </main>
-</body>
-
+            <section></section>
+        </main>
+    </body>
 </html>
