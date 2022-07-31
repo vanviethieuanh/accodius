@@ -49,7 +49,7 @@
         <link rel="stylesheet" href="css/index.css" />
 
         <title>Accodius</title>
-        <meta name="title" content="Accodius" />
+        <meta name="title" content="Accodius | Card" />
         <meta
             name="description"
             content="👋 Hi, Accodius here! Here is our information, follow us!"
@@ -74,6 +74,53 @@
             content="👋 Hi, Accodius here! Here is our information, follow us!"
         />
         <!-- <meta property="twitter:image" content=""> -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+            rel="stylesheet"
+        />
     </head>
-    <body></body>
+
+    <body>
+        <style>
+            body {
+                font-family: 'Roboto Mono', monospace;
+                box-sizing: border-box;
+
+                display: grid;
+                place-items: center;
+
+                min-height: 100vh;
+            }
+
+            main {
+                display: flex;
+
+                flex-direction: column;
+            }
+
+            p,
+            h1,
+            a {
+                text-align: center;
+            }
+
+            a {
+                font-weight: bold;
+                color: black;
+            }
+        </style>
+        <main>
+            <h1>Creative coding</h1>
+            <p>This is a collection of project of creative coding.</p>
+
+            <ul>
+                <li>
+                    <a href="./lissajous-curve">Lissajous curve </a>
+                </li>
+            </ul>
+        </main>
+    </body>
 </html>
