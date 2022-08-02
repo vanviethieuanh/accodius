@@ -143,6 +143,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 .call {
   text-align: center;
 }
@@ -171,8 +175,8 @@ a {
 .dense .platform {
   height: 51px;
   background-color: #363636;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .dense .platform:hover {
@@ -210,7 +214,7 @@ a {
       -ms-user-select: none;
           user-select: none;
   color: inherit;
-  margin: .5rem 2rem;
+  margin: 0.5rem 2rem;
   margin-left: 0;
 }
 
