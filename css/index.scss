@@ -77,7 +77,7 @@ section {
         margin: 0;
     }
 
-    &#greeting > div {
+    &#greeting>div {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -123,8 +123,7 @@ section {
         $border-thickness: 2px;
 
         border: $border;
-        border-width: $border-thickness $border-thickness $border-thickness * 2
-            $border-thickness;
+        border-width: $border-thickness $border-thickness calc($border-thickness * 2) $border-thickness;
         border-radius: 8px;
     }
 }
@@ -208,4 +207,42 @@ section {
     background-size: 50%;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+
+.floating-buttons {
+    /* float at center of screen */
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+
+    a {
+        margin: 0 10px;
+        text-decoration: none;
+    }
+
+    div {
+        width: 46px;
+        height: 46px;
+
+        /* center content with grid*/
+        display: grid;
+        place-items: center;
+
+        font-size: 20px;
+
+        border-radius: 50%;
+
+        background-color: white;
+        color: #111111;
+
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.4);
+        }
+
+    }
 }

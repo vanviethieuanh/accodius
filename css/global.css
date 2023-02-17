@@ -18,17 +18,14 @@
 body {
   font-size: 16px;
   font-family: "Oswald", sans-serif;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: 0;
   scrollbar-width: thin;
 }
-
 body * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -66,19 +63,15 @@ button {
   font-weight: normal;
   font-size: 1.2rem;
   line-height: 0;
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
   padding-bottom: 6px;
-  -webkit-box-shadow: inset 0 -6px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: inset 0 -6px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 -6px 0 rgba(0, 0, 0, 0.2);
 }
-
 button:active {
   height: 34px;
   padding-bottom: 0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  -webkit-transform: translate(0, 6px);
-          transform: translate(0, 6px);
+  box-shadow: none;
+  transform: translate(0, 6px);
 }
 
 .card {
@@ -86,22 +79,15 @@ button:active {
   height: 343px;
   border: solid 3px black;
   border-radius: 10px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 280px auto;
-      grid-template-rows: 280px auto;
+  grid-template-rows: 280px auto;
   overflow: hidden;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-
 .card .illustration {
-  display: -ms-grid;
   display: grid;
   place-content: center;
 }
-
 .card:hover {
   margin-top: -20px;
-}
-/*# sourceMappingURL=global.css.map */
+}/*# sourceMappingURL=global.css.map */

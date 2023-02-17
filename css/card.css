@@ -18,17 +18,14 @@
 body {
   font-size: 16px;
   font-family: "Oswald", sans-serif;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: 0;
   scrollbar-width: thin;
 }
-
 body * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -66,19 +63,15 @@ button {
   font-weight: normal;
   font-size: 1.2rem;
   line-height: 0;
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
   padding-bottom: 6px;
-  -webkit-box-shadow: inset 0 -6px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: inset 0 -6px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 -6px 0 rgba(0, 0, 0, 0.2);
 }
-
 button:active {
   height: 34px;
   padding-bottom: 0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  -webkit-transform: translate(0, 6px);
-          transform: translate(0, 6px);
+  box-shadow: none;
+  transform: translate(0, 6px);
 }
 
 .card {
@@ -86,35 +79,33 @@ button:active {
   height: 343px;
   border: solid 3px black;
   border-radius: 10px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 280px auto;
-      grid-template-rows: 280px auto;
+  grid-template-rows: 280px auto;
   overflow: hidden;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-
 .card .illustration {
-  display: -ms-grid;
   display: grid;
   place-content: center;
 }
-
 .card:hover {
   margin-top: -20px;
 }
 
+a:hover {
+  text-decoration: none;
+}
+a:hover * {
+  text-decoration: none;
+}
+
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: #f9f9fa;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -ms-grid;
+  background-color: hsl(240deg, 9%, 98%);
+  box-sizing: border-box;
   display: grid;
   place-items: center;
   height: 100vh;
@@ -127,7 +118,6 @@ main {
   padding-bottom: 4rem;
   width: auto;
   max-width: 400px;
-  display: -ms-grid;
   display: grid;
   gap: 4rem;
 }
@@ -142,47 +132,37 @@ h1 {
 a {
   text-decoration: none;
 }
-
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .call {
   text-align: center;
 }
-
 .call p {
   margin: 7px;
 }
 
 .options {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(190px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
   gap: 1rem;
 }
 
 .dense {
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  display: -ms-grid;
   display: grid;
   margin-top: 20px;
 }
-
 .dense .platform {
   height: 51px;
   background-color: #363636;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-
 .dense .platform:hover {
   background-color: var(--color);
 }
-
 .dense h2 {
   display: none;
 }
@@ -192,49 +172,36 @@ a:hover {
   border: solid 3px #000000;
   border-width: 2px 2px 4px 2px;
   border-radius: 8px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 50px auto;
-      grid-template-columns: 50px auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  grid-template-columns: 50px auto;
+  align-items: center;
   background-color: var(--color);
 }
-
 .platform:active {
   border-width: 2px;
-  -webkit-transform: translateY(2px);
-          transform: translateY(2px);
+  transform: translateY(2px);
 }
-
 .platform h2 {
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   color: inherit;
   margin: 0.5rem 2rem;
   margin-left: 0;
 }
-
 .platform .icon {
   font-size: 1.2rem;
-  display: -ms-grid;
   display: grid;
   place-items: center;
 }
-
 .platform.email h2::after {
-  content: 'vanviethieuanh@gmail.com';
+  content: "vanviethieuanh@gmail.com";
 }
-
 .platform.email h2.copied::after {
-  content: 'Copied to clipboard';
+  content: "Copied to clipboard";
 }
-
 .platform.email:hover h2:not(.copied)::after {
-  content: 'Copy to clipboard';
+  content: "Copy to clipboard";
 }
 
 @media (max-width: 768px) {
@@ -242,7 +209,6 @@ a:hover {
     width: auto;
   }
   .platform.email:hover h2::after {
-    content: 'Copied to clipboard';
+    content: "Copied to clipboard";
   }
-}
-/*# sourceMappingURL=card.css.map */
+}/*# sourceMappingURL=card.css.map */
