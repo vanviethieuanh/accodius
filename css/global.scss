@@ -28,7 +28,7 @@ $violet: #7D3CFF;
 $behance: #0057ff;
 $purple: #9B59B6;
 
-:root{
+:root {
     --blue: #699BF7;
     --red: #FC5151;
     --light-yellow: #FFE100;
@@ -60,7 +60,8 @@ body {
     border: 0;
 
     scrollbar-width: thin;
-    *{
+
+    * {
         box-sizing: border-box;
     }
 }
@@ -71,12 +72,14 @@ h1 {
     font-family: $font-dense;
     color: black;
 }
+
 h2 {
     font-family: $font-dense;
     font-weight: normal;
     color: black;
     font-size: 1.2rem;
 }
+
 h3 {
     font-weight: 300;
     font-family: $font-dense;
@@ -89,33 +92,35 @@ p {
     color: $text-subtitle;
 }
 
-$button-shadow-size:6px;
-$button-height:40px;
-button{
+$button-shadow-size: 6px;
+$button-height: 40px;
+
+button {
     outline: none;
 
     height: $button-height;
 
     border-radius: 0;
     border: $border;
-    
+
     font-family: $font-dense;
     font-weight: normal;
     font-size: 1.2rem;
     line-height: 0;
-    
+
     padding: 0 .5rem;
     padding-bottom: $button-shadow-size;
 
     box-shadow: inset 0 -1*$button-shadow-size 0 rgba($color: #000000, $alpha: .2);
 
-    &:active{
-        height: $button-height -$button-shadow-size;
+    &:active {
+        height: calc($button-height - $button-shadow-size);
         padding-bottom: 0;
         box-shadow: none;
         transform: translate(0, $button-shadow-size);
     }
 }
+
 .card {
     width: 280px;
     height: 343px;
@@ -140,4 +145,3 @@ button{
         margin-top: -20px;
     }
 }
-

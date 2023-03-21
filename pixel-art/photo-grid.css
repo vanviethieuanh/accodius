@@ -24,3 +24,31 @@
     }
 
   }
+
+  
+.floating-buttons {
+  /* float at center of screen */
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+}
+.floating-buttons a {
+  margin: 0 10px;
+  text-decoration: none;
+}
+.floating-buttons div {
+  width: 46px;
+  height: 46px;
+  /* center content with grid*/
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  border-radius: 50%;
+  background-color: white;
+  color: #111111;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+.floating-buttons div:hover {
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.4);
+}/*# sourceMappingURL=index.css.map */
